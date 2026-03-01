@@ -8,6 +8,13 @@
     <link href="https://fonts.googleapis.com" rel="stylesheet">
 </head>
 <body>
+    <div id="loader-wrapper">
+        <div class="loader-content">
+            <p>Loading Assets...</p>
+            <div class="spinner"></div>
+        </div>
+    </div>
+
     <div class="sidebar">
         <h2 class="logo">EB <span>WIKI</span></h2>
         <a href="#police">Police Dept.</a>
@@ -19,13 +26,22 @@
     <div class="content">
         <section id="police">
             <h1>Police Department</h1>
-            <p>The Bremen Police Department (Polizei) is responsible for public safety and traffic control.</p>
+            <p>The Bremen Police Department is responsible for public safety.</p>
             <div class="info-grid">
                 <div class="box">Rank 1: Cadet</div>
                 <div class="box">Rank 2: Officer</div>
-                <div class="box">Rank 3: Sergeant</div>
             </div>
         </section>
     </div>
+
+    <script>
+        window.addEventListener('load', () => {
+            setTimeout(() => {
+                const loader = document.getElementById('loader-wrapper');
+                loader.style.opacity = '0';
+                setTimeout(() => loader.style.display = 'none', 500);
+            }, 3000); 
+        });
+    </script>
 </body>
 </html>
