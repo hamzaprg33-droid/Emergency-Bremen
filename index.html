@@ -1,1 +1,53 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emergency Bremen | Roblox</title>
+    <link rel="stylesheet" href="index_style.css">
+    <link href="https://fonts.googleapis.com" rel="stylesheet">
+</head>
+<body>
 
+    <!-- Ladebildschirm -->
+    <div id="loader-wrapper">
+        <div class="loader-content">
+            <p>Assets werden geladen...</p>
+            <div class="spinner"></div>
+        </div>
+    </div>
+
+    <!-- Hauptinhalt -->
+    <header>
+        <nav>
+            <div class="logo">EMERGENCY <span>BREMEN</span></div>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Updates</a></li>
+                <li><a href="#">Discord</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="hero">
+        <div class="hero-text">
+            <h1>Antworte auf den Ruf.</h1>
+            <p>Erlebe den realistischsten Rettungsdienst-Simulator in den Straßen von Bremen.</p>
+            <a href="https://www.roblox.com" target="_blank" class="btn-play">JETZT SPIELEN</a>
+        </div>
+    </main>
+
+    <script>
+        // Blendet den Lader nach 4 Sekunden aus
+        window.addEventListener('load', () => {
+            setTimeout(() => {
+                const loader = document.getElementById('loader-wrapper');
+                loader.style.opacity = '0';
+                setTimeout(() => {
+                    loader.style.display = 'none';
+                }, 500);
+            }, 4000); // 4000ms = 4 Sekunden
+        });
+    </script>
+</body>
+</html>
