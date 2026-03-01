@@ -8,6 +8,13 @@
     <link href="https://fonts.googleapis.com" rel="stylesheet">
 </head>
 <body>
+    <div id="loader-wrapper">
+        <div class="loader-content">
+            <p>Loading Assets...</p>
+            <div class="spinner"></div>
+        </div>
+    </div>
+
     <div class="container">
         <header>
             <a href="index.html" class="back-btn">← BACK</a>
@@ -20,12 +27,17 @@
                 <h2>v1.2 - The Bremen Central Update</h2>
                 <p>Added new police cruisers, revamped the main station, and improved siren acoustics.</p>
             </div>
-            <div class="update-card">
-                <div class="date">FEBRUARY 2024</div>
-                <h2>v1.1 - Emergency Response</h2>
-                <p>Introduced fire department mechanics and medical callouts.</p>
-            </div>
         </section>
     </div>
+
+    <script>
+        window.addEventListener('load', () => {
+            setTimeout(() => {
+                const loader = document.getElementById('loader-wrapper');
+                loader.style.opacity = '0';
+                setTimeout(() => loader.style.display = 'none', 500);
+            }, 3000); 
+        });
+    </script>
 </body>
 </html>
