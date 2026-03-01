@@ -1,52 +1,53 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="en-GB">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Emergency Bremen | Roblox</title>
+    <title>Emergency Bremen | Official Site</title>
     <link rel="stylesheet" href="index_style.css">
     <link href="https://fonts.googleapis.com" rel="stylesheet">
 </head>
 <body>
 
-    <!-- Ladebildschirm -->
+    <!-- Loading Screen -->
     <div id="loader-wrapper">
         <div class="loader-content">
-            <p>Assets werden geladen...</p>
+            <p>Loading Assets...</p>
             <div class="spinner"></div>
         </div>
     </div>
 
-    <!-- Hauptinhalt -->
     <header>
         <nav>
-            <div class="logo">EMERGENCY <span>BREMEN</span></div>
+            <div class="logo">EMERGENCY<span>BREMEN</span></div>
             <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Updates</a></li>
-                <li><a href="#">Discord</a></li>
+                <li><a href="https://hamzaprg33-droid.github.io/Emergency-Bremen/">Home</a></li>
+                <li><a href="https://hamzaprg33-droid.github.io/Emergency-Bremen/#updates.html">Updates</a></li>
+                <li><a href="https://hamzaprg33-droid.github.io/Emergency-Bremen/#wiki.html">Wiki</a></li>
+                <li><a href="https://discord.gg/8vN6VGtZaA" target="_blank">Discord</a></li>
             </ul>
         </nav>
     </header>
 
     <main class="hero">
-        <div class="hero-text">
-            <h1>Antworte auf den Ruf.</h1>
-            <p>Erlebe den realistischsten Rettungsdienst-Simulator in den Straßen von Bremen.</p>
-            <a href="https://www.roblox.com" target="_blank" class="btn-play">JETZT SPIELEN</a>
+        <div class="overlay"></div>
+        <div class="hero-content">
+            <h1>RESPOND TO THE CALL.</h1>
+            <p>Join the most immersive emergency services simulation on the streets of Bremen.</p>
+            <div class="button-group">
+                <a href="https://www.roblox.com/de/games/128323597976819/Notruf-Bremen" target="_blank" class="btn-primary">PLAY ON ROBLOX</a>
+                <a href="https://discord.gg/8vN6VGtZaA" target="_blank" class="btn-secondary">JOIN DISCORD</a>
+            </div>
         </div>
     </main>
 
     <script>
-        // Blendet den Lader nach 4 Sekunden aus
         window.addEventListener('load', () => {
             setTimeout(() => {
                 const loader = document.getElementById('loader-wrapper');
                 loader.style.opacity = '0';
-                setTimeout(() => {
-                    loader.style.display = 'none';
-                }, 500);
-            }, 4000); // 4000ms = 4 Sekunden
+                setTimeout(() => loader.style.display = 'none', 500);
+            }, 4000); 
         });
     </script>
 </body>
