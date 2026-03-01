@@ -1,9 +1,46 @@
+:root {
+    --primary-blue: #007bff;
+    --emergency-red: #d90429;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+/* Ladebildschirm Styling */
+#loader-wrapper {
+    position: fixed;
+    inset: 0;
+    background: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    transition: opacity 0.6s ease;
+}
+.loader-content p {
+    font-family: 'Orbitron', sans-serif;
+    color: var(--primary-blue);
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+.spinner {
+    width: 50px;
+    height: 50px;
+    border: 3px solid rgba(255,255,255,0.1);
+    border-top-color: var(--primary-blue);
+    border-radius: 50%;
+    animation: spin 0.8s linear infinite;
+    margin: 0 auto;
+}
+@keyframes spin { to { transform: rotate(360deg); } }
+
+/* Seite Styling */
 body {
     background: #050505 url('https://images.unsplash.com') no-repeat center center fixed;
     background-size: cover;
     color: white;
     font-family: 'Inter', sans-serif;
-    margin: 0;
 }
 
 .container {
@@ -15,14 +52,22 @@ body {
 
 header { display: flex; align-items: center; gap: 40px; margin-bottom: 50px; }
 
-.back-btn { color: #007bff; text-decoration: none; font-family: 'Orbitron'; }
+.back-btn { 
+    color: var(--primary-blue); 
+    text-decoration: none; 
+    font-family: 'Orbitron'; 
+    font-size: 0.8rem;
+    border: 1px solid var(--primary-blue);
+    padding: 8px 15px;
+    border-radius: 4px;
+}
 
 h1 { font-family: 'Orbitron'; font-size: 2.5rem; }
-h1 span { color: #d90429; }
+h1 span { color: var(--emergency-red); }
 
 .update-card {
     background: rgba(255, 255, 255, 0.05);
-    border-left: 4px solid #007bff;
+    border-left: 4px solid var(--primary-blue);
     padding: 25px;
     margin-bottom: 20px;
     border-radius: 0 10px 10px 0;
@@ -31,6 +76,6 @@ h1 span { color: #d90429; }
 
 .update-card:hover { background: rgba(255, 255, 255, 0.1); transform: translateX(10px); }
 
-.date { color: #007bff; font-size: 0.8rem; font-weight: bold; margin-bottom: 10px; }
+.date { color: var(--primary-blue); font-size: 0.8rem; font-weight: bold; margin-bottom: 10px; }
 h2 { margin-bottom: 10px; font-size: 1.5rem; }
 p { color: #ccc; line-height: 1.6; }
